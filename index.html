@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800, initial-scale=1.0">
+    <title>Turbo Horizons</title>
+    <link href="Asset/css2.css" rel="stylesheet">
+
+    <style>
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background-size: cover; 
+            background-position: center;
+            background-color: black;  
+            color: white; 
+            font-family: Arial, sans-serif; 
+        }
+
+        #juegoCanvas { 
+            background-color: #111;    
+            background-image: url('Asset/fondoMenu.webp'); /* Cambia 'fondoMenu.png' por tu imagen */
+        }
+
+        #menu { 
+            position: absolute; 
+            text-align: center; 
+            font-family: 'Russo One', sans-serif; 
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #00FFFF; /* Cian brillante */
+            text-shadow: 2px 2px 5px #000000, 0 0 10px #FF00FF; /* Sombra negra + glow fucsia */
+        }
+
+        p {
+            color: #F0E68C; /* Amarillo suave */
+            text-shadow: 2px 2px 5px #000000; /* Sombra negra */
+            font-size: 1.5rem; /* Tamaño más grande */
+        }
+
+        button {
+            padding: 10px 20px; 
+            font-size: 1.2rem; /* Tamaño más grande */
+            margin-top: 10px; 
+            cursor: pointer; 
+            font-family: 'Russo One', sans-serif;
+            color: #FFFFFF; /* Texto blanco */
+            background-color: #1E90FF; /* Azul neón */
+            border: 2px solid #FFFFFF; /* Borde blanco */
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #000000; /* Sombra negra */
+            transition: 0.3s;
+        }
+
+        button:nth-child(2) {
+            background-color: #FF1493; /* Rosa neón */
+        }
+
+        button:hover {
+            background-color: #32CD32; /* Verde lima en hover */
+            box-shadow: 0 0 15px #32CD32, 2px 2px 5px #000000; /* Resplandor verde + sombra negra */
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <h1>Turbo Horizons</h1>
+        <p>Selecciona el número de jugadores:</p>
+        <button onclick="iniciarJuego(1)">1 Jugador</button>
+        <br>
+        <button onclick="iniciarJuego(2)">2 Jugadores</button>
+    </div>
+    <canvas id="juegoCanvas" width="800" height="600"></canvas>
+    <script src="Asset/juego.js"></script>
+</body>
+</html>
